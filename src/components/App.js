@@ -5,15 +5,13 @@ const App = () => {
   // write your code here
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
-  //const timerId = useRef();
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       //alert("Enter pressed");
       const value = Math.floor(event.target.value);
-      //alert("Enter pressed");
-      //console.log(value);
+
       if (isNumber(value) && value > 0) {
-        //console.log("yes");
         setTime(value);
         setStart(true);
       } else {
