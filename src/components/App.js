@@ -6,9 +6,9 @@ const App = () => {
 
   const handlekeydown = (event) => {
     if (event.keyCode === 13) {
-      let num = event.target.value;
+      const num = Math.floor(event.target.value);
       if (isNumber(num) && num > 0) {
-        setTime(Math.floor(num));
+        setTime(num);
       } else {
         setTime(0);
       }
@@ -16,7 +16,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    if (time < 1) {
+    if (time === 1) {
       return;
     }
     const timerID = setTimeout(() => {
